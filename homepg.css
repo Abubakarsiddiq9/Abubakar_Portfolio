@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    user-select: none;
+}
+body {
+  font-family:"Poppins", sans-serif;
+  font-size: 20px;
+  background-color: rgb(242, 242, 242);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h3 {
+  font-weight: 700; /* Bold for headings */
+}
+
+p {
+  font-weight: 400; /* Normal for text */
+}
+
+.emphasis {
+  font-style: italic; /* Use Roboto italic */
+}
+
+
+.headercs{
+    margin-top: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    width: 100%;
+    
+}
+.navcs{
+    display: flex;
+    gap: 25px;
+    background-color: rgb(255, 255, 255);
+    justify-self: center;
+    padding: 20px 40px;
+    font: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+img {
+    mix-blend-mode: multiply;
+    /* mix-blend-mode: normal; */
+}
+.theme-toggle{
+    cursor: pointer;
+    padding: 5px 10px;
+    
+    margin-right: 10px;
+    border-radius: 10px;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+}
+.highlightcs{
+    margin-top: 150px;
+    /* background-color: antiquewhite; */
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    width: 100%;
+
+}
+.highlcs{
+    padding: 20px;
+}
+.social_links{
+    display: flex;
+    gap: 10px;
+}
+.social_links img{
+    cursor: pointer;
+    width: 26px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+.social_links img:hover {
+    transform: scale(1.15);
+}
+.social_links img:active {
+    transform: scale(0.95);
+}
+.whomics{
+    padding: 20px;
+    margin: 40px 30px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+.toolsuse img{
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.toolsuse img:hover{
+    transform: scale(1.15);
+}
+.toolsuse{
+    display: flex;
+    gap: 30px;
+
+}
+.whatiucs{
+    width: fit-content;
+    background-color: rgb(255, 255, 255);
+    margin: 40px 30px;
+    padding: 20px;
+    border-radius: 10px;
+
+
+}
