@@ -14,21 +14,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  padding-bottom: 30px;
 }
 img {
     mix-blend-mode: multiply;
     /* mix-blend-mode: normal; */
 }
-
-h1, h2, h3 {
-  font-weight: 700; /* Bold for headings */
-}
-
-p {
-  font-weight: 400; /* Normal for text */
-}
-
-
 .headercs{
     margin-top: 18px;
     position: fixed;
@@ -39,6 +30,7 @@ p {
     align-items: center;
     width: 100%;
     z-index: 1000;
+    
 }
 .navcs{
     display: flex;
@@ -64,62 +56,44 @@ p {
     gap: 10px;
     background-color: rgb(255, 255, 255);
 }
-.highlightcs{
-    margin-top: 150px;
-    /* background-color: antiquewhite; */
-    width: 100%;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    width: 100%;
+
+
+.project_cards{
+  margin-top: 50px;
+}
+.c1{
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  width: 600px;
+  line-height: 30px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 80px;
+}
+.pj_name{
+  margin-bottom: 10px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.card_buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.card_button{
+  display: block;          /* makes <a> behave like button */
+  text-align: center;      /* centers text */
+  text-decoration: none;   /* removes underline */
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  transition: transform 0.3s ease;
 
 }
-.highlcs{
-    padding: 20px;
+.card_button:hover {
+    transform: scale(1.02);
 }
-.social_links{
-    display: flex;
-    gap: 10px;
-}
-.social_links img{
-    cursor: pointer;
-    width: 26px;
-    margin-top: 20px;
-    transition: transform 0.3s ease;
-}
-.social_links img:hover {
-    transform: scale(1.15);
-}
-.social_links img:active {
+.card_button:active {
     transform: scale(0.95);
-}
-.whomics{
-    padding: 20px;
-    margin: 40px 30px;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-}
-.toolsuse img{
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-.toolsuse img:hover{
-    transform: scale(1.15);
-}
-.toolsuse{
-    display: flex;
-    gap: 30px;
-
-}
-.whatiucs{
-    width: fit-content;
-    background-color: rgb(255, 255, 255);
-    margin: 40px 30px;
-    padding: 20px;
-    border-radius: 10px;
-
-
 }
