@@ -64,6 +64,7 @@ img {
   
 }
 .feature_card{
+  margin-top: 50px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   gap: 10px;
