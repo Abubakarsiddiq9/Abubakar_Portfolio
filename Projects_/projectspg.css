@@ -58,6 +58,30 @@ img {
 }
 
 
+
+.featuredpr{
+  margin: 30px;
+  
+}
+.feature_card{
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.feature_card img{
+  width: 75%;
+  border: 1px solid rgb(231, 231, 231);
+}
+
+.feature_content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
 .project_cards{
   margin-top: 50px;
 }
@@ -97,3 +121,4 @@ img {
 .card_button:active {
     transform: scale(0.95);
 }
+
