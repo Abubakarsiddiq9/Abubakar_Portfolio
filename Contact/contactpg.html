@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abubakar Portfolio</title>
+    <link rel="stylesheet" href="contactpg.css">
+</head>
+<body>
+    
+    <!-- HEADER SECTIONNN -->
+    <header class="headercs">
+        <nav class="navcs">
+            <a href="../index.html" >Home</a>
+            <a href="Projects_/projectspg.html">Projects</a>
+            <a href="Journey/journeypg.html">Journey</a>
+            <a href="Contact/contactpg.html" style="background-color: rgb(205, 205, 205);padding: 8px 18px;border-radius: 10px;margin-top: -7px;">Contact</a>
+        </nav>
+        <div class="theme-toggle">
+            <img style="width: 25px;" src="/imgs/darkmode.png" alt="">
+            <p>Dark mode</p>
+        </div>
+    </header>
+
+    <div class="midsection">
+        <img src="img/msgicon.png" alt="" width="70px">
+        <p style="font-size: 40px;">Contact</p>
+    </div>
+
+    <!-- Form Sectionnn -->
+     <form class="formcs" id="contactForm">
+        <p>Name</p>
+        <input type="text" placeholder="Enter your name" id="name" required>
+        <span class="error" id="nameError"></span>
+        <p>Email Address</p>
+        <input type="email" placeholder="youremail@awesome.com" id="email" required>
+        <span class="error" id="emailError"></span>
+        <p>Message</p>
+        <textarea placeholder="Enter your message" id="message" required></textarea>       
+        <span class="error" id="messageError"></span>
+        <button class="sendcs" id="sendBtn" type="submit">
+            <span  id="btnText">Send it my way</span>
+            <div class="loader" id="loader"></div>
+        </button>
+     </form>
+
+
+
+    <script src="script.js"></script></body>
+</html>

@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    user-select: none;
+}
+body {
+  font-family:"Poppins", sans-serif;
+  font-size: 20px;
+  background-color: rgb(242, 242, 242);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    mix-blend-mode: multiply;
+    /* mix-blend-mode: normal; */
+}
+
+h1, h2, h3 {
+  font-weight: 700; /* Bold for headings */
+}
+
+p {
+  font-weight: 400; /* Normal for text */
+}
+
+
+.headercs{
+    margin-top: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    width: 100%;
+    z-index: 1000;
+}
+.navcs{
+    display: flex;
+    gap: 25px;
+    background-color: rgb(255, 255, 255);
+    justify-self: center;
+    padding: 20px 40px;
+    font: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.theme-toggle{
+    cursor: pointer;
+    padding: 5px 10px;
+    
+    margin-right: 10px;
+    border-radius: 10px;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.midsection{
+    margin-top: 180px;
+    display: flex;
+    gap: 10px;
+}
+
+.formcs{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 20px);
+    max-width: 90%;
+    padding: 20px;
+    gap: 15px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+.formcs input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(120, 120, 120);
+}
+.sendcs{
+    margin-top: 20px;
+    width: 20%;
+    font-weight: 600;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+}
+.sendcs span{
+    color: white;
+}
+
+.sendcs:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+
+/* Click Effect */
+.sendcs:active{
+    transform: scale(0.96);
+}
+textarea{
+    height: 200px;
+    padding: 15px;
+
+    border-radius: 10px;
+    border: 1px solid #ccc;
+
+    resize: none;
+
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.loader{
+
+    width: 18px;
+    height: 18px;
+
+    border: 3px solid white;
+    border-top-color: rgba(255, 255, 255, 0.25);
+
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+
+    display: none;
+}
+
+@keyframes spin{
+
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+
+}
+.error{
+
+    color: red;
+
+    font-size: 14px;
+
+    margin-top: -10px;
+
+}
+
+.inputError{
+
+    border: 2px solid red;
+
+}
