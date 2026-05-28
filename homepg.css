@@ -64,6 +64,9 @@ p {
     gap: 10px;
     background-color: rgb(255, 255, 255);
 }
+.mobile-dropdown {
+    display: none;
+}
 .highlightcs{
     margin-top: 150px;
     /* background-color: antiquewhite; */
@@ -178,7 +181,6 @@ p {
     }
 
     .highlightcs {
-        /* background-color: antiquewhite; */
         grid-template-columns: 1fr;
         justify-items: center;
         gap: 18px;
@@ -209,6 +211,7 @@ p {
     .social_links img {
         width: 20px;
         margin-top: 12px;
+        margin-bottom: 20px;
     }
 
     .whomics {
@@ -248,22 +251,84 @@ p {
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 431px) {
     .headercs {
         position: absolute;
         display: block;
     }
 
     .navcs {
-        width: 100%;
+        display: none;
     }
 
     .theme-toggle {
         display: none;
     }
 
+    .mobile-dropdown {
+        display: block;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+
+    .mobile-dropdown summary {
+        display: flex;
+        justify-content: flex-end;
+        padding: 8px 12px;
+        list-style: none;
+    }
+
+    .mobile-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .mobile-dropdown summary img {
+        width: 20px !important;
+    }
+
+    .mobile-dropdown-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0 12px 12px;
+    }
+
+    .mobile-dropdown-content a {
+        padding: 7px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .mobile-dropdown-content a:hover,
+    .mobile-dropdown-content a:first-child {
+        background-color: rgb(205, 205, 205);
+    }
+
+    .mobile-theme-toggle {
+        cursor: pointer;
+        padding: 7px 10px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background-color: rgb(242, 242, 242);
+    }
+
+    .mobile-theme-toggle img {
+        width: 18px;
+    }
+
+    .mobile-theme-toggle p {
+        font-size: 12px;
+    }
+
     .highlightcs {
-        margin-top: 120px;
+        margin-top: 70px;
     }
 
     .highlcs > p:first-child {
