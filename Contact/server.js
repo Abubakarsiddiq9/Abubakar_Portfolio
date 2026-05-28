@@ -20,6 +20,13 @@ app.post("/contact", async (req, res) => {
         if (!name || !email || !message) {
             return res.status(400).send("Please fill in all fields");
         }
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+        if(!email.match(emailPattern)){
+
+            return res.status(400).send("Invalid Email");
+
+        }
 
         const transporter = nodemailer.createTransport({
 
@@ -66,6 +73,14 @@ ${message}
 
 });
 
-app.listen(3000, () => {
-    console.log("Server Running on Port 3000");
-});
+if(process.env.NODE_ENV !== "test"){
+
+    app.listen(3000, () => {
+
+        console.log("Server Running on Port 3000");
+
+    });
+
+}
+
+module.exports = app;
