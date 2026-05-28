@@ -15,6 +15,12 @@ body {
     justify-content: center;
     align-items: center;
 }
+body.dark-mode {
+    background-color: rgb(132, 132, 132);
+}
+body.dark-mode * {
+    color: white;
+}
 img {
     mix-blend-mode: multiply;
     /* mix-blend-mode: normal; */
@@ -63,6 +69,36 @@ p {
     align-items: center;
     gap: 10px;
     background-color: rgb(255, 255, 255);
+}
+.mobile-dropdown {
+    display: none;
+}
+body.dark-mode .navcs,
+body.dark-mode .theme-toggle,
+body.dark-mode .journey_card {
+    background-color: rgb(0, 0, 0);
+}
+body.dark-mode .navcs a[style] {
+    background-color: rgb(30, 30, 30) !important;
+}
+body.dark-mode img {
+    mix-blend-mode: normal;
+}
+body.dark-mode .timeline::before {
+    background-color: white;
+}
+body.dark-mode .circle {
+    background-color: black;
+}
+body.dark-mode .journey_card span,
+body.dark-mode .journey_card small {
+    color: rgb(180, 180, 180);
+}
+body.dark-mode .journey_card.left::after {
+    border-left-color: black;
+}
+body.dark-mode .journey_card.right::after {
+    border-right-color: black;
 }
 
 .journey_body{
@@ -206,6 +242,57 @@ p {
 }
 
 @media (max-width: 780px){
+    body {
+        align-items: stretch;
+        overflow-x: hidden;
+    }
+
+    .headercs {
+        width: calc(100% - 24px);
+        left: 12px;
+        margin-top: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .navcs {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        padding: 8px;
+        border-radius: 6px;
+    }
+
+    .navcs a {
+        font-size: 10px;
+        padding: 6px 8px;
+    }
+
+    .navcs a[style] {
+        margin-top: 0 !important;
+        padding: 6px 10px !important;
+        border-radius: 6px !important;
+    }
+
+    .theme-toggle {
+        flex-shrink: 0;
+        gap: 4px;
+        margin-right: 0;
+        padding: 5px 7px;
+        border-radius: 6px;
+    }
+
+    .theme-toggle img {
+        width: 18px !important;
+    }
+
+    .theme-toggle p {
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
     .journey_body{
         max-width: 92%;
         justify-content: flex-start;
@@ -232,5 +319,96 @@ p {
         right: auto;
         border-left: 0;
         border-right: 16px solid white;
+    }
+
+    body.dark-mode .journey_card.left::after,
+    body.dark-mode .journey_card.right::after {
+        border-right-color: black;
+    }
+}
+
+@media (max-width: 431px) {
+    .headercs {
+        position: absolute;
+        display: block;
+    }
+
+    .navcs,
+    .theme-toggle {
+        display: none;
+    }
+
+    .mobile-dropdown {
+        display: block;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+
+    body.dark-mode .mobile-dropdown {
+        background-color: rgb(0, 0, 0);
+    }
+
+    .mobile-dropdown summary {
+        display: flex;
+        justify-content: flex-end;
+        padding: 8px 12px;
+        list-style: none;
+    }
+
+    .mobile-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .mobile-dropdown summary img {
+        width: 20px !important;
+    }
+
+    .mobile-dropdown-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0 12px 12px;
+    }
+
+    .mobile-dropdown-content a {
+        padding: 7px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .mobile-dropdown-content a:hover,
+    .mobile-dropdown-content a:nth-child(3) {
+        background-color: rgb(205, 205, 205);
+    }
+
+    .mobile-theme-toggle {
+        cursor: pointer;
+        padding: 7px 10px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background-color: rgb(242, 242, 242);
+    }
+
+    body.dark-mode .mobile-theme-toggle {
+        background-color: rgb(30, 30, 30);
+    }
+
+    .mobile-theme-toggle img {
+        width: 18px;
+    }
+
+    .mobile-theme-toggle p {
+        font-size: 12px;
+    }
+
+    body > p:first-of-type {
+        margin-top: 85px !important;
     }
 }

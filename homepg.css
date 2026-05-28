@@ -15,6 +15,12 @@ body {
     justify-content: center;
     align-items: center;
 }
+body.dark-mode {
+    background-color: rgb(132, 132, 132);
+}
+body.dark-mode * {
+    color: white;
+}
 img {
     mix-blend-mode: multiply;
     /* mix-blend-mode: normal; */
@@ -66,6 +72,18 @@ p {
 }
 .mobile-dropdown {
     display: none;
+}
+body.dark-mode .navcs,
+body.dark-mode .theme-toggle,
+body.dark-mode .whomics,
+body.dark-mode .whatiucs {
+    background-color: rgb(0, 0, 0);
+}
+body.dark-mode .navcs a[style] {
+    background-color: rgb(30, 30, 30) !important;
+}
+body.dark-mode img {
+    mix-blend-mode: normal;
 }
 .highlightcs{
     margin-top: 150px;
@@ -274,6 +292,10 @@ p {
         cursor: pointer;
     }
 
+    body.dark-mode .mobile-dropdown {
+        background-color: rgb(0, 0, 0);
+    }
+
     .mobile-dropdown summary {
         display: flex;
         justify-content: flex-end;
@@ -317,6 +339,10 @@ p {
         justify-content: center;
         gap: 8px;
         background-color: rgb(242, 242, 242);
+    }
+
+    body.dark-mode .mobile-theme-toggle {
+        background-color: rgb(30, 30, 30);
     }
 
     .mobile-theme-toggle img {

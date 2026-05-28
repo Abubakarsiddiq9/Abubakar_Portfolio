@@ -16,6 +16,12 @@ body {
     align-items: center;
   padding-bottom: 30px;
 }
+body.dark-mode {
+  background-color: rgb(132, 132, 132);
+}
+body.dark-mode * {
+  color: white;
+}
 img {
     mix-blend-mode: multiply;
     /* mix-blend-mode: normal; */
@@ -58,6 +64,22 @@ img {
 }
 .mobile-dropdown {
   display: none;
+}
+body.dark-mode .navcs,
+body.dark-mode .theme-toggle,
+body.dark-mode .feature_card,
+body.dark-mode .c1 {
+  background-color: rgb(0, 0, 0);
+}
+body.dark-mode .navcs a[style] {
+  background-color: rgb(30, 30, 30) !important;
+}
+body.dark-mode img {
+  mix-blend-mode: normal;
+}
+body.dark-mode .card_button {
+  background-color: white;
+  color: black;
 }
 
 
@@ -284,6 +306,10 @@ img {
     cursor: pointer;
   }
 
+  body.dark-mode .mobile-dropdown {
+    background-color: rgb(0, 0, 0);
+  }
+
   .mobile-dropdown summary {
     display: flex;
     justify-content: flex-end;
@@ -329,6 +355,10 @@ img {
     background-color: rgb(242, 242, 242);
   }
 
+  body.dark-mode .mobile-theme-toggle {
+    background-color: rgb(30, 30, 30);
+  }
+
   .mobile-theme-toggle img {
     width: 18px;
   }
@@ -339,5 +369,8 @@ img {
 
   body > p:first-of-type {
     margin-top: 85px !important;
+  }
+  .c1d{
+    border-top: 1px solid rgb(160, 160, 160);
   }
 }
