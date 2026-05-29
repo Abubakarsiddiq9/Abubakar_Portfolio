@@ -91,7 +91,7 @@ contactForm.addEventListener("submit", async (event) => {
     sendBtn.disabled = true;
 
     try{
-        const response = await fetch("http://localhost:3000/contact", {
+        const response = await fetch("https://abubakar-portfolio-hhgg.onrender.com/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
