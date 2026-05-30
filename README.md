@@ -8,6 +8,7 @@ A responsive full-stack portfolio website,with a working contact form.
 - Emailjs
 - Jest
 
+Implemented GitHub and Cloudflare Pages integration to enable CI/CD workflow.
 Node.js was used to create the backend server for handling contact form requests.
 Emailjs is used for sending emails to me.
 Jest was used for unit testing email validation logic.
