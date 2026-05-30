@@ -91,6 +91,7 @@ contactForm.addEventListener("submit", async (event) => {
     sendBtn.disabled = true;
 
     try{
+        // http://localhost:3000/contact
         const response = await fetch("https://abubakar-portfolio-hhgg.onrender.com/contact", {
             method: "POST",
             headers: {
@@ -106,7 +107,7 @@ contactForm.addEventListener("submit", async (event) => {
         const data = await response.text();
 
         if(!response.ok){
-            throw new Error(data);
+            throw new Error(data || "Failed to send message");
         }
 
         alert(data);
@@ -118,7 +119,7 @@ contactForm.addEventListener("submit", async (event) => {
     }
 
     catch(error){
-        alert(error.message || "Something went wrong");
+        alert(error.message || "Something went wrong. Please try again later.");
     }
 
     /* Loading Stop */
