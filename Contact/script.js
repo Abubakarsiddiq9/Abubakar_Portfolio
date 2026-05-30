@@ -89,38 +89,35 @@ contactForm.addEventListener("submit", async (event) => {
     loader.style.display = "block";
     btnText.style.display = "none";
     sendBtn.disabled = true;
+// http://localhost:3000/contact
+    try {
 
-    try{
-        // http://localhost:3000/contact
-        const response = await fetch("https://abubakar-portfolio-hhgg.onrender.com/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
+        await emailjs.send(
+
+            "service_z74vujd",
+
+            "template_mkxe1xi",
+
+            {
                 name: name.value.trim(),
                 email: email.value.trim(),
                 message: message.value.trim()
-            })
-        });
+            }
 
-        const data = await response.text();
+        );
 
-        if(!response.ok){
-            throw new Error(data || "Failed to send message");
-        }
+        alert("Message sent successfully!");
 
-        alert(data);
-
-        /* Clear Fields */
         name.value = "";
         email.value = "";
         message.value = "";
+
     }
 
-    catch(error){
-        alert(error.message || "Something went wrong. Please try again later.");
-    }
+catch(error){
+    console.error(error);
+    alert(error.text || error.message);
+}
 
     /* Loading Stop */
     loader.style.display = "none";
