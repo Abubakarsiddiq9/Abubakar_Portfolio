@@ -5,6 +5,7 @@ github link of devs portfolios- https://github.com/emmabostian/developer-portfol
 - HTML
 - CSS
 - JS
+- Emailjs
 i'm using this stack because it's sufficient for building a responsive and interactive portfolio website, 
 and i have built projects using this stack, and I’m comfortable working with it.
 so i'm using this stack now
@@ -21,5 +22,5 @@ so i'm using this stack now
 # Risks / Unknowns
 - First time deploying with cloudflare workers
 - Contact form integrationt
-- Nodemailer for sending emails
+- Emailjs for sending emails
 

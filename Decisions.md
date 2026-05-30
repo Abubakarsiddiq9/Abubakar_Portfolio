@@ -11,5 +11,6 @@ I used ai to
 - Make theme button work
 - Make contact page work and to send me user's messages
 - Write automated tests 
+- Guide me in deploying my website
 
 
